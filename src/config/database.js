@@ -13,15 +13,7 @@ const sequelize = new Sequelize(
     }
 );
 
-const testConnection = async () => {
-    try {
-        await sequelize.authenticate();
-        console.log('PostgreSQL connection established successfully.');
-        return true;
-    }   catch (error) {
-        console.error('Unable to connect to PostgreSQL:', error.message);
-        return false;
-    }
-};
 
-module.exports = { sequelize, testConnection };
+
+
+module.exports = sequelize;
